@@ -1,0 +1,9 @@
+//app.js
+APP({
+  onLaunch:function(){
+    wx.cloud.init({
+      env:'test-a69sm',
+      traceUser:true
+    })
+  }
+})
