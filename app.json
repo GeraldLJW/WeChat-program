@@ -7,26 +7,26 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#EA5149",
-    "navigationBarTitleText": "云测试小程序",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "指下星图",
+    "navigationBarTextStyle": "white"
   },
   "tabBar":{
     "list":[
       {
         "pagePath":"pages/index/index",
-        "text":"首页",
-        "iconPath":"image/bingan.png",
-        "selectedIconPath":"image/bingan-active.png"
+        "text":"图像编辑",
+        "iconPath":"image/binggan.png",
+        "selectedIconPath":"image/binggan-active.png"
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志",
+        "text": "过往图片",
         "iconPath": "image/danhuang.png",
         "selectedIconPath": "image/danhuang-active.png"
       },
       {
         "pagePath": "pages/me/me",
-        "text": "我的",
+        "text": "个人信息",
         "iconPath": "image/huasheng.png",
         "selectedIconPath": "image/huasheng-active.png"
       }

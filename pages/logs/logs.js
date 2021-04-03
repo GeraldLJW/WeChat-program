@@ -5,11 +5,38 @@ Page({
   data: {
     logs: []
   },
-  onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync('logs') || []).map(log => {
-        return util.formatTime(new Date(log))
+  getlogs:function(){
+    const that=this
+    const ui=wx.getStorageSync('userinfo')
+    if(!ui.openid){
+      wx.switchTab({
+        url: '/pages/me/me',
       })
-    })
+    }else{
+      wx.cloud.callFunction({
+        name:"getlogs",
+        data:{
+          openid:ui.openid
+        },
+        success:res=>{
+          console.log("res",res)
+          that.setData({
+            logs:res.result.data.map(log=>{
+              var date=util.formatTime(new Date(log.date))
+              log.date=date
+              return log
+            })
+          })
+        },
+        fail:res=>{
+          console.log("res",res)
+        }
+      })
+    }
+  },
+  //onLoad 页面首次加载的时候执行
+  //onshow 页面每次切换的时候执行
+  onShow:function(){
+      this.getlogs()
   }
 })

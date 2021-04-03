@@ -1,5 +1,5 @@
 //app.js
-APP({
+App({
   onLaunch:function(){
     wx.cloud.init({
       env:'test-a69sm',

@@ -1,0 +1,15 @@
+<view class="background" style="display:flex;" >
+    <view class='canvas'>
+        <canvas  style="width:{{canvasWidth}}px; height:{{canvasHeight}}px"canvas-id="myCanvas" />
+    </view>
+    <view class="button">
+        <button  class='buttontype' bindtap="cropper">裁剪</button>
+        <button  class='buttontype'>锐化</button>
+        <button  class='buttontype'>黑白</button>
+        <button  class='buttontype'>柔和</button>
+        <button  class='buttontype'>文字</button>
+        <button  class='buttontype'>保存</button>
+    </view>
+</view>
+
+
