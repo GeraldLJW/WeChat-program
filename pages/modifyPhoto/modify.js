@@ -259,6 +259,7 @@ Page({
   },
   toCropPage(){
     var self=this
+    
     wx.navigateTo({
         url:'/pages/cropper/cropper-example?chooseemotion='+self.data.tempImageSrc,
     })
@@ -805,14 +806,13 @@ Page({
   },
   tospinPage(){
     var self=this
-    self.setData({
-      page:'spinPage',
-      canvasHeight: self.device.windowHeight - 160 * self.deviceRatio,
-      allText: {}
+    console.log(self.data.tempImageSrc)
+    wx.navigateTo({
+      url:'/pages/freecroppertrans/freecroppertrans?chooseemotion='+self.data.tempImageSrc,
     })
   },
   spin(){
-    
+
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

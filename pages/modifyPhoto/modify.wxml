@@ -49,11 +49,11 @@
   </view>
   <!-- 主页面-底部 <image src="../../image/1.svg"></image>-->
   <view class="toolbar-bottom" wx:if="{{page==='mainPage'}}">
-    <view bindtap='toCropPage'><text class="icon-cutter"></text><text class="text">裁剪</text></view>
+    <view bindtap='toCropPage'><text class="icon-cutter"></text><text class="text">比例裁剪</text></view>
     <view bindtap='toTextPage'><text class="icon-text"></text><text class="text">添加文字</text></view>
     <view bindtap='toDoodlePage'><text class="icon-pen"></text><text class="text">涂鸦</text></view>
     <view bindtap='tofilterPage'><text class="icon-filter"></text><text class="text">滤镜</text></view>
-    <view bindtap='tospinPage'><text class="icon-spin"></text><text class="text">旋转</text></view>
+    <view bindtap='tospinPage'><text class="icon-spin"></text><text class="text">自由裁剪</text></view>
     <!-- <view>
       <picker  class='icon-filter' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
           <text class="text">
