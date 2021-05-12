@@ -1,14 +1,18 @@
-<view class="background" style="display:flex;" >
+<view  class="background" style="display:flex;" >
     <view class='canvas'>
-        <canvas  style="width:{{canvasWidth}}px; height:{{canvasHeight}}px"canvas-id="myCanvas" />
+        <canvas style="width:{{canvasWidth}}px; height:{{canvasHeight}}px"canvas-id="myCanvas" />
     </view>
     <view class="button">
         <button  class='buttontype' bindtap="cropper">裁剪</button>
-        <button  class='buttontype'>锐化</button>
-        <button  class='buttontype'>黑白</button>
-        <button  class='buttontype'>柔和</button>
-        <button  class='buttontype'>文字</button>
-        <button  class='buttontype'>保存</button>
+        <picker  class='buttontype' bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+                当前选择：{{array[index]}}  
+            </view>
+        </picker>
+        <!-- <button  class='buttontype'>黑白</button> -->
+        <button  class='buttontype' bindtap="spin">旋转</button>
+        <button  class='buttontype' bindtap="addtext">文字</button>
+        <button  class='buttontype' bindtap="save">保存</button>
     </view>
 </view>
 

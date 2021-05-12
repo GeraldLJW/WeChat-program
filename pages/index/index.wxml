@@ -1,8 +1,7 @@
 <!--index.wxml-->
-<view wx:if="{{hasImg===false}}" class="container">
-  <view class="changshi button" bindtap="change">+</view>
+<view class="page-body-index">
+  <view class="btn-area">
+    <view class="changshi button" bindtap="change">^_^</view>
+    <view class="right button" bindtap="splice">^+^</view>
+  </view> 
 </view>
-<view wx:if="{{hasImg===true}}" class="container">
-  <canvas style="width:{{annulusHeight}}px; height:{{annulusHeight}}px"canvas-id="myCanvas" />
-</view>
-

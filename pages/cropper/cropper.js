@@ -49,6 +49,8 @@ let fnLog = function(msg) {
   
   let touchStartX = 0;
   let touchStartY = 0;
+
+  let start=false;
   
   
   Component({
@@ -73,8 +75,7 @@ let fnLog = function(msg) {
       boxTop: 0,
   
       canvasWidth: 0,
-      canvasHeight: 0
-  
+      canvasHeight: 0,
     },
   
   
@@ -110,9 +111,10 @@ let fnLog = function(msg) {
           initialBoxHeightRatio = opts.initialBoxHeightRatio;
         }
   
-        if (opts.aspectRatio) {
+        // if (opts.aspectRatio) {
           aspectRatio = opts.aspectRatio;
-        }
+          // start=opts.start;
+        // }
         
   
   
@@ -186,9 +188,7 @@ let fnLog = function(msg) {
           
         }).exec();
         
-      },
-  
-  
+      },    
       //////////////////////////////////////
       fnTouchStart: function(e) {
         fnLog('start')
@@ -431,7 +431,7 @@ let fnLog = function(msg) {
       fnTouchCancel: function(e) {
         fnLog('cancel')
       },
-  
+      
       fnCrop: function(opts) {
         let _self = this;
 
@@ -451,7 +451,7 @@ let fnLog = function(msg) {
   
         let imagePath = _self.data.imagePath;
         let canvasContext = wx.createCanvasContext('canvas', _self);
-  
+        
         let boxLeft = _self.data.boxLeft;
         let boxTop = _self.data.boxTop;
         let boxWidth = _self.data.boxWidth;
@@ -464,12 +464,37 @@ let fnLog = function(msg) {
         let sHeight = Math.ceil(boxHeight * imageStageRatio);
         let dx = 0;
         let dy = 0;
+        
   
         let dWidth = Math.ceil(sWidth * pixelRatio);
         let dHeight = Math.ceil(sHeight * pixelRatio);
-
-        canvasContext.drawImage(imagePath, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
-        canvasContext.draw(false, function() {
+        
+        // if(start==true){
+        //   canvasContext.translate(dWidth,dy);
+        //   canvasContext.rotate(90*Math.PI/180);
+        //   canvasContext.drawImage(imagePath, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+        //   canvasContext.draw(false, function() {
+        //     wx.canvasToTempFilePath({
+        //       x: dx,
+        //       y: dy,
+        //       width: dWidth,
+        //       height: dHeight,
+        //       destWidth: sWidth,
+        //       destHeight: sHeight,
+        //       canvasId: 'canvas',
+        //       fileType: outputFileType,
+        //       quality: quality,
+        //       success: _success,
+        //       fail: _fail,
+        //       complete: _complete
+        //     }, _self);
+        //   })
+        //   console.log('dd')
+        //   start=false
+        // }
+        // else{
+          canvasContext.drawImage(imagePath, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight);
+          canvasContext.draw(false, function() {
           wx.canvasToTempFilePath({
             x: dx,
             y: dy,
@@ -485,12 +510,11 @@ let fnLog = function(msg) {
             complete: _complete
           }, _self);
         })
-  
-  
-      }
-  
-  
+        console.log('ddd')
+        // }
+
+      },
     }
   
-  
   })
+  

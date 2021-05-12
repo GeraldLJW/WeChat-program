@@ -12,15 +12,21 @@
     width: 100%;
     height: 80%;
     margin-top: 0;
+    background-color: rgb(248, 225, 225);
 }
 .buttontype{
     width:16.6%;
     height:55px;
     color:white;
-    background: linear-gradient(#ccfbff, #ef96c5); 
+    background: linear-gradient(#ffffff,#EA5149); 
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    border-radius: 0px;
 }
-
-    
+.picker {
+    width: 55px;
+    text-align: center;
+    color: white;
+    font-size: x-small;
+}

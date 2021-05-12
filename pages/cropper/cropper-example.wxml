@@ -1,7 +1,35 @@
 <view class='body'>
 
   <cropper id='cropper' class='stage'></cropper>
-  
+  <!-- <view class="barpro"> -->
+  <scroll-view class="scroll-view" scroll-x="{{true}}" bindscroll="scroll" style="width: 100%">
+      <!-- <view wx:if="{{choose==10}}" class="btnpro1 btn-proportionspin" bindtap='spin' >旋转</view>
+      <view wx:elif="{{choose!=10}}" class="btnpro btn-proportionspin" bindtap='spin' >旋转</view> -->
+      <view wx:if="{{choose==0}}" class="btnpro1 btn-proportionnull" bindtap='free' data-num="{{0}}">free</view>
+      <view wx:elif="{{choose!=0}}" class="btnpro btn-proportionnull" bindtap='free' data-num="{{0}}">free</view>
+      <view wx:if="{{choose==1}}"class="btnpro1 btn-proportion11" bindtap='one' data-num="{{1}}">1:1</view>
+      <view wx:elif="{{choose!=1}}"class="btnpro btn-proportion11" bindtap='one' data-num="{{1}}">1:1</view>
+      <view wx:if="{{choose==2}}" class="btnpro1 btn-proportion34" bindtap='sansi' data-num="{{0.75}}">3:4</view>
+      <view wx:elif="{{choose!=2}}" class="btnpro btn-proportion34" bindtap='sansi' data-num="{{0.75}}">3:4</view>
+      <view wx:if="{{choose==3}}"class="btnpro1 btn-proportion43" bindtap='sisan' data-num="{{1.25}}">4:3</view>
+      <view wx:elif="{{choose!=3}}" class="btnpro btn-proportion43" bindtap='sisan' data-num="{{1.25}}">4:3</view>
+      <view wx:if="{{choose==4}}" class="btnpro1 btn-proportion169" bindtap='yiliujiu' data-num="{{1.78}}">16:9</view>
+      <view wx:elif="{{choose!=4}}" class="btnpro btn-proportion169" bindtap='yiliujiu' data-num="{{1.78}}">16:9</view>
+      <view wx:if="{{choose==5}}" class="btnpro1 btn-proportion916" bindtap='jiuyiliu' data-num="{{0.5625}}">9:16</view>
+      <view wx:elif="{{choose!=5}}" class="btnpro btn-proportion916" bindtap='jiuyiliu' data-num="{{0.5625}}">9:16</view>
+      <view wx:if="{{choose==6}}"class="btnpro1 btn-proportion23" bindtap='ersan' data-num="{{0.667}}">2:3</view>
+      <view wx:elif="{{choose!=6}}"class="btnpro btn-proportion23" bindtap='ersan' data-num="{{0.667}}">2:3</view>
+      <view wx:if="{{choose==7}}" class="btnpro1 btn-proportion32" bindtap='saner' data-num="{{1.5}}">3:2</view>
+      <view wx:elif="{{choose!=7}}" class="btnpro btn-proportion32" bindtap='saner' data-num="{{1.5}}">3:2</view>
+      <view wx:if="{{choose==8}}"class="btnpro1 btn-proportion189" bindtap='yibajiu' data-num="{{2}}">18:9</view>
+      <view wx:elif="{{choose!=8}}"class="btnpro btn-proportion189" bindtap='yibajiu' data-num="{{2}}">18:9</view>
+      <view wx:if="{{choose==9}}"class="btnpro1 btn-proportion918" bindtap='jiuyiba' data-num="{{0.5}}">9:18</view>
+      <view wx:elif="{{choose!=9}}"class="btnpro btn-proportion918" bindtap='jiuyiba' data-num="{{0.5}}">9:18</view>
+  </scroll-view>
+    
+    
+  <!-- </view> -->
+
   <view class='bar'>
     <view class='btn btn-cancel ripple' bindtap='fnCancel'>取消</view>
     <view class='btn btn-submit ripple' bindtap='fnSubmit'>确定</view>

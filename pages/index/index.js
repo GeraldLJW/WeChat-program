@@ -21,6 +21,7 @@ Page({
   data:{
     tempFilePaths: '',
     hasImg:false,
+    selected:0,
   },
   onLoad: function () {
   },
@@ -56,7 +57,7 @@ Page({
       success: function (res) {
         var tempFilePath = res.tempFilePaths[0]
         wx.navigateTo({
-          url:'/pages/list/list?chooseemotion='+tempFilePath,
+          url:'/pages/modifyPhoto/modify?chooseemotion='+tempFilePath,
         })
         
         // ctx.drawImage(res.tempFilePaths[0],0,0,218,218)
@@ -68,7 +69,24 @@ Page({
         // })
       }
     })
-  },
+    // wx.navigateTo({
+    //   url:'/pages/modifyPhoto/modify',
+    // })
+        
+        // ctx.drawImage(res.tempFilePaths[0],0,0,218,218)
+        // ctx.draw()
+        
+        // that.setData({
+        //   tempFilePaths:res.tempFilePaths[0],
+        //   hasImg:true,
+        // })
+      },
+      splice(){
+        wx.navigateTo({
+          url:'/pages/spliceMenu/spliceMenu',
+        })
+      }
+
   // change(){
   //   wx.navigateTo({
   //     url:'/pages/list/list'

@@ -24,11 +24,11 @@ page{
   .btn{
     position: relative;
     flex-grow: 1;
-      border: 2rpx solid grey;
+    border: 2rpx solid grey;
     line-height: 80rpx;
     text-align: center;
-      color: white;
-     font-size: 32rpx;
+    color: white;
+    font-size: 32rpx;
   }
   
   .btn-cancel{
@@ -39,4 +39,86 @@ page{
   .btn-submit{
      border-top-right-radius: 40rpx;
      border-bottom-right-radius: 40rpx;
+  }
+  .barpro{
+    height: 80rpx;
+    padding: 36rpx;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+  }
+  .btnpro{
+    width: 40px;
+    height: 20px;
+    display: inline-block;
+    border: 2rpx solid grey;
+    flex-grow: 1;
+    /* line-height: 80rpx; */
+    text-align: center;
+    color: white;
+    font-size: 32rpx;
+    background-color:  black;
+  }
+  .btnpro1{
+    width: 40px;
+    height: 20px;
+    display: inline-block;
+    border: 2rpx solid grey;
+    flex-grow: 1;
+    /* line-height: 80rpx; */
+    text-align: center;
+    color: white;
+    font-size: 32rpx;
+    background-color:  rgb(248, 225, 225);
+  }
+  .btn-proportionspin{
+    border-radius: 10rpx;
+  }
+  .btn-proportionnull{
+    margin-left: 10px;
+    border-radius: 10rpx;
+  }
+  .btn-proportion11{
+    margin-left: 10px;
+    border-radius: 10rpx;
+  }
+  .btn-proportion34{
+    margin-left: 10px;
+    border-radius: 10rpx;
+  }
+  .btn-proportion43{
+    margin-left: 10px;
+    border-radius: 10rpx;
+  }
+  .btn-proportion169{
+    margin-left: 10px;
+    border-radius: 10rpx;
+  }
+  .btn-proportion916{
+    margin-left: 10px;
+    border-radius: 10rpx;
+  }
+  .btn-proportion23{
+    margin-left: 10px;
+    border-radius: 10rpx;
+  }
+  .btn-proportion32{
+    margin-left: 10px;
+    border-radius: 10rpx;
+  }
+  .btn-proportion189{
+    margin-left: 10px;
+    border-radius: 10rpx;
+  }
+  .btn-proportion918{
+    margin-left: 10px;
+    border-radius: 10rpx;
+  }
+  .scroll-view{
+    white-space: nowrap;
+    height: 80rpx;
+    padding: 10% 0;
+    display: flex;
+    flex-direction: row;
+    background-color: black;
   }

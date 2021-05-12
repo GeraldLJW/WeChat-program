@@ -1,21 +1,40 @@
+.page-body-index{
+  height: 100%;
+  width: 100%;
+  
+}
 .button{
 	width: 70px;
 	height: 70px;
 	line-height:70px;
   border-radius: 20%;
   border: none;
-  text-align:center;
+  /* text-align:center; */
   font-size: 25px;
   color:#FFFFFF;
   font-weight:bold;
-  margin-top:30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 50%;
 }
-
+.btn-area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  flex-direction: column;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  z-index: 5;
+}
 .right{
 	background:#EA5149;
 	float: right;
+  margin-top: 40%;
 }
 .changshi{
   background:#EA5149;
-	float: right;
+	float: left;
 }
