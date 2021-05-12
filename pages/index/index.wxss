@@ -1,21 +1,21 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.button{
+	width: 70px;
+	height: 70px;
+	line-height:70px;
+  border-radius: 20%;
+  border: none;
+  text-align:center;
+  font-size: 25px;
+  color:#FFFFFF;
+  font-weight:bold;
+  margin-top:30%;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.right{
+	background:#EA5149;
+	float: right;
 }
-
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
+.changshi{
+  background:#EA5149;
+	float: right;
 }
